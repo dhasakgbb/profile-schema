@@ -11,7 +11,8 @@ export default defineConfig([
     sourcemap: true,
     clean: true,
     noExternal: ['zod'],
-    target: 'es2022'
+    target: 'es2022',
+    outExtension: ({ format }) => ({ js: format === 'esm' ? '.mjs' : '.cjs' })
   },
   // IIFE for vanilla JS consumers (helena-states, helena-math). Exposes
   // `window.HelenaProfile`. zod is bundled because vanilla apps have no
