@@ -24,6 +24,7 @@ export default defineConfig([
     sourcemap: true,
     noExternal: ['zod'],
     target: 'es2020',
+    outExtension: () => ({ js: '.js' }),
     footer: {
       // tsup writes `var HelenaProfile = (() => { ... })();`
       // We want it on window for vanilla pages.
