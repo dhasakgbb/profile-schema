@@ -15,9 +15,13 @@ export function secondPreference(p: ExportedProfile): VarkChannel | null {
 /**
  * True when the profile's expires_at has passed. Caller supplies `now`
  * for testability; defaults to current wall clock.
+ *
+ * Uses Date.parse() rather than lexicographic ISO-string comparison so
+ * profiles with non-UTC offsets (e.g. "+05:00") compare correctly. The
+ * schema's isoDate refine accepts any string Date.parse() understands.
  */
 export function isProfileStale(p: ExportedProfile, now: Date = new Date()): boolean {
-  return now.toISOString() >= p.expires_at;
+  return now.getTime() >= Date.parse(p.expires_at);
 }
 
 function sortPrefs(p: ExportedProfile): [VarkChannel, number][] {
