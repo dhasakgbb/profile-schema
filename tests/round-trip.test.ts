@@ -25,7 +25,7 @@ describe('encode → decode → schema.parse round trip', () => {
       }
     },
     source: 'behavioral_observation',
-    child_label: 'Helena'
+    child_label: 'Astrid'
   };
 
   it('preserves every field through encode → decode → safeParse', () => {

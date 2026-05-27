@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig([
-  // ESM + CJS for TypeScript consumers (helena-learner-profile, helena-spelling).
+  // ESM + CJS for TypeScript consumers (learner-profile, spelling).
   // zod is bundled — these consumers will pin one version this way and avoid
   // duplicate zod copies in their own builds.
   {
@@ -14,9 +14,11 @@ export default defineConfig([
     target: 'es2022',
     outExtension: ({ format }) => ({ js: format === 'esm' ? '.mjs' : '.cjs' })
   },
-  // IIFE for vanilla JS consumers (helena-states, helena-math). Exposes
-  // `window.HelenaProfile`. zod is bundled because vanilla apps have no
-  // module system.
+  // IIFE for vanilla JS consumers (states, math). Exposes
+  // `window.HelenaProfile` (capital H — historic identifier, kept pinned by
+  // SRI on the CDN; do not rename without a coordinated v1.1.0 re-release
+  // and integrity-hash update across all 4 consumers). zod is bundled
+  // because vanilla apps have no module system.
   {
     entry: { 'index.iife': 'src/iife-entry.ts' },
     format: ['iife'],

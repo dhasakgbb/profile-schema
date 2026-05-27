@@ -1,7 +1,7 @@
 {
   "name": "profile-schema",
   "version": "1.0.0",
-  "description": "Canonical learner-profile schema for the Helena platform — zod schema, helpers, fragment codec, telemetry readers. Consumed by helena-learner-profile, helena-spelling, helena-states, helena-math.",
+  "description": "Canonical learner-profile schema for the Astrid platform — zod schema, helpers, fragment codec, telemetry readers. Consumed by learner-profile, spelling, states, math.",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",

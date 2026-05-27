@@ -13,7 +13,7 @@ const PROFILE: ExportedProfile = {
   plan: 'strengths',
   module_overrides: {},
   source: 'intake_quiz',
-  child_label: 'Helena'
+  child_label: 'Astrid'
 };
 
 describe('encode/decodeProfileFragment', () => {

@@ -60,7 +60,7 @@ describe('exportedProfileSchema', () => {
   });
 
   it('accepts an optional child_label', () => {
-    const r = exportedProfileSchema.safeParse({ ...VALID, child_label: 'Helena' });
+    const r = exportedProfileSchema.safeParse({ ...VALID, child_label: 'Astrid' });
     expect(r.success).toBe(true);
   });
 
