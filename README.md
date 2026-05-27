@@ -1,13 +1,13 @@
 # profile-schema
 
-Canonical learner-profile schema for the Helena platform.
+Canonical learner-profile schema for the Astrid platform.
 
 One zod schema, one place. Consumed by:
 
-- `helena-learner-profile` (SvelteKit producer)
-- `helena-spelling` (Svelte 5 SPA)
-- `helena-states` (vanilla JS, via `<script>`)
-- `helena-math` (vanilla JS, via `<script>`)
+- `learner-profile` (SvelteKit producer — Astrid's Quiz)
+- `spelling` (Svelte 5 SPA — Astrid's Spell Lab)
+- `states` (vanilla JS, via `<script>`)
+- `math` (vanilla JS, via `<script>`)
 
 ## Install
 
